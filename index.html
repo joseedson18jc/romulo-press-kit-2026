@@ -3,10 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RC // PRESS KIT 2026 — Romulo Cavalcanti</title>
-  <meta name="description" content="Press Kit 2026 de Romulo Cavalcanti — DJ e Produtor carioca. Dark edition: release, mídia, booking." />
+  <title>Romulo Cavalcanti — Press Kit 2026 · DJ + Producer · Carioca</title>
+  <meta name="description" content="Press Kit 2026 de Romulo Cavalcanti — DJ e Produtor carioca, residente da Festa Tchiboom. House × Tribal. Bookings, mídia, release, agenda." />
   <meta name="theme-color" content="#0a0a0a" />
+  <meta name="author" content="Romulo Cavalcanti" />
+  <link rel="canonical" href="https://joseedson18jc.github.io/romulo-press-kit-2026/" />
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="qr/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="qr/apple-touch-icon.png" />
+  <link rel="mask-icon" href="qr/favicon.svg" color="#123170" />
+
+  <!-- Open Graph (Facebook · WhatsApp · LinkedIn · Discord) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://joseedson18jc.github.io/romulo-press-kit-2026/" />
+  <meta property="og:title" content="Romulo Cavalcanti — Press Kit 2026" />
+  <meta property="og:description" content="DJ + Producer carioca · House × Tribal · Festa Tchiboom resident · Bookings open." />
+  <meta property="og:image" content="https://joseedson18jc.github.io/romulo-press-kit-2026/qr/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Romulo Cavalcanti · Press Kit 2026 · DJ + Producer" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Romulo Cavalcanti · Press Kit" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Romulo Cavalcanti — Press Kit 2026" />
+  <meta name="twitter:description" content="DJ + Producer carioca · House × Tribal · Bookings open." />
+  <meta name="twitter:image" content="https://joseedson18jc.github.io/romulo-press-kit-2026/qr/og-image.png" />
+
+  <!-- Preload LCP image + critical fonts -->
+  <link rel="preload" as="image" href="assets/img/hero.jpg" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Big+Shoulders+Display:wght@300..900&family=IBM+Plex+Mono:ital,wght@0,300..600;1,300..600&display=swap" rel="stylesheet" />
@@ -1293,6 +1320,205 @@
     .sets-strip-cell b{color:var(--orange);font-weight:500}
     .sets-strip-cell span{color:var(--mute)}
 
+    /* === STATS · By The Numbers === */
+    .stats-section{background:var(--bg-2)}
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border:1px solid var(--rule-2);
+      margin-top:40px;
+    }
+    .stat-cell{
+      padding:46px 32px 36px;
+      border-right:1px solid var(--rule-2);
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+      transition:background .35s ease;
+    }
+    .stat-cell:last-child{border-right:0}
+    .stat-cell::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(ellipse at top left, rgba(18,49,112,.18), transparent 60%);
+      opacity:0;
+      transition:opacity .45s ease;
+      z-index:-1;
+    }
+    .stat-cell:hover::before{opacity:1}
+    .stat-cell:hover{background:rgba(20,20,20,.55)}
+    .stat-cell::after{
+      content:"";
+      position:absolute;
+      top:0;left:0;
+      width:30px;
+      height:2px;
+      background:var(--orange-bright);
+      transition:width .55s cubic-bezier(.22,.61,.36,1);
+    }
+    .stat-cell:hover::after{width:75%}
+    .stat-num{
+      display:block;
+      font-family:var(--display);
+      font-weight:900;
+      font-size:clamp(3.5rem,6.5vw,6.5rem);
+      line-height:.84;
+      letter-spacing:-.05em;
+      color:var(--ink);
+      margin-bottom:20px;
+      font-variant-numeric:tabular-nums;
+    }
+    .stat-num em{font-style:normal;color:var(--orange-bright);font-size:.6em;vertical-align:.05em;margin-left:.04em}
+    .stat-label{
+      display:block;
+      font-family:var(--mono);
+      font-size:.72rem;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:var(--orange-bright);
+      margin-bottom:8px;
+      font-weight:500;
+    }
+    .stat-meta{
+      display:block;
+      font-family:var(--mono);
+      font-size:.62rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--mute);
+      line-height:1.5;
+    }
+
+    /* === AGENDA · Recent / Upcoming Shows === */
+    .agenda-list{
+      list-style:none;
+      border-top:1px solid var(--rule-2);
+      margin-top:16px;
+    }
+    .agenda-row{
+      display:grid;
+      grid-template-columns:auto 1.5fr 1fr 1fr auto;
+      gap:24px;
+      align-items:center;
+      padding:24px 14px;
+      border-bottom:1px solid var(--rule-2);
+      transition:padding .35s ease, background .3s ease;
+    }
+    .agenda-row:hover{padding-left:24px;background:rgba(20,20,20,.35)}
+    .ag-date{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+      min-width:78px;
+      text-transform:uppercase;
+    }
+    .ag-date b{
+      font-weight:500;
+      font-size:.66rem;
+      letter-spacing:.2em;
+      color:var(--orange-bright);
+      font-family:var(--mono);
+    }
+    .ag-date em{
+      font-style:normal;
+      font-family:var(--display);
+      font-weight:700;
+      font-size:2.4rem;
+      letter-spacing:-.04em;
+      color:var(--ink);
+      line-height:.9;
+    }
+    .ag-venue{
+      font-family:var(--display);
+      font-weight:700;
+      font-size:clamp(1.3rem,2.2vw,1.85rem);
+      letter-spacing:-.02em;
+      text-transform:uppercase;
+      color:var(--ink);
+      line-height:1.05;
+    }
+    .ag-venue em{font-style:normal;color:var(--orange)}
+    .ag-city{
+      font-family:var(--mono);
+      font-size:.72rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--ink-2);
+    }
+    .ag-role{
+      font-family:var(--mono);
+      font-size:.7rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--mute);
+    }
+    .ag-status{
+      font-family:var(--mono);
+      font-size:.66rem;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:var(--mute);
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border:1px solid var(--rule-2);
+    }
+    .agenda-row.upcoming .ag-status{
+      color:var(--orange-bright);
+      border-color:var(--orange-bright);
+    }
+    .ag-dot{
+      width:8px;height:8px;
+      border-radius:50%;
+      background:var(--mute);
+      display:inline-block;
+    }
+    .agenda-row.upcoming .ag-dot{
+      background:var(--orange-bright);
+      box-shadow:0 0 0 0 rgba(58,95,176,.6);
+      animation:pulse 1.6s ease-out infinite;
+    }
+    .agenda-row.past .ag-venue{color:var(--ink-2)}
+    .agenda-foot{
+      margin-top:18px;
+      font-family:var(--mono);
+      font-size:.66rem;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:var(--mute);
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+    .agenda-foot b{color:var(--orange-bright);font-weight:500}
+
+    /* === Scroll margin / focus / parallax === */
+    .section,.hero,.vstrip,.portraits,.closing{scroll-margin-top:80px}
+    :focus-visible{
+      outline:2px solid var(--orange-bright);
+      outline-offset:3px;
+      border-radius:1px;
+    }
+    a:focus-visible,button:focus-visible{outline-offset:4px}
+    .btn:focus-visible,.header-action:focus-visible,.skip:focus-visible{outline-offset:2px}
+    .nav a:focus-visible{outline:1px solid var(--orange-bright);outline-offset:0;border-color:transparent}
+    .menu-toggle:focus-visible{outline-offset:2px}
+    @supports (animation-timeline: scroll()){
+      .hero-photo .ph{
+        animation:parallaxDrift linear both;
+        animation-timeline:scroll(root);
+        animation-range:0 100vh;
+        will-change:transform;
+      }
+    }
+    @keyframes parallaxDrift{
+      from{transform:translateY(0) scale(1)}
+      to{transform:translateY(70px) scale(1.05)}
+    }
+
     /* === FEATURED TRACKS — interactive list === */
     .featured{margin-top:60px;padding-top:38px;border-top:1px solid var(--rule)}
     .featured-head{
@@ -2065,6 +2291,111 @@
       .hero-photo{aspect-ratio:16/10;max-width:380px}
       .section{padding:48px 0 56px}
     }
+
+    /* Stats + Agenda responsive */
+    @media (max-width:1080px){
+      .stats-grid{grid-template-columns:1fr 1fr}
+      .stat-cell{border-right:1px solid var(--rule-2);border-bottom:1px solid var(--rule-2)}
+      .stat-cell:nth-child(2n){border-right:0}
+      .stat-cell:nth-child(n+3){border-bottom:0}
+      .agenda-row{grid-template-columns:auto 1.4fr 1fr auto;gap:18px}
+      .ag-role{grid-column:1/-1;padding-left:102px;margin-top:-6px;font-size:.62rem}
+    }
+    @media (max-width:760px){
+      .stat-cell{padding:30px 22px 24px}
+      .stat-num{font-size:clamp(2.6rem,11vw,3.8rem);margin-bottom:14px}
+      .stat-label{font-size:.62rem;letter-spacing:.18em}
+      .stat-meta{font-size:.54rem;letter-spacing:.14em}
+      .agenda-row{
+        grid-template-columns:auto 1fr auto;
+        gap:14px;padding:18px 6px;row-gap:4px
+      }
+      .agenda-row:hover{padding-left:12px}
+      .ag-date{min-width:60px}
+      .ag-date em{font-size:1.7rem}
+      .ag-date b{font-size:.56rem}
+      .ag-venue{font-size:1.05rem;grid-column:2}
+      .ag-city{grid-column:2;font-size:.58rem;letter-spacing:.14em;margin-top:-2px}
+      .ag-role{grid-column:1/-1;padding-left:74px;margin-top:0;font-size:.55rem;letter-spacing:.14em}
+      .ag-status{grid-column:3;grid-row:1/3;font-size:.55rem;padding:5px 9px}
+      .agenda-foot{font-size:.58rem;letter-spacing:.18em}
+    }
+    @media (max-width:480px){
+      .stat-cell{padding:22px 14px 18px}
+      .stat-num{font-size:clamp(2.1rem,13vw,3rem);margin-bottom:10px}
+      .stat-label{font-size:.55rem}
+      .stat-meta{font-size:.5rem}
+      .agenda-row{grid-template-columns:auto 1fr;gap:10px;padding:14px 2px}
+      .ag-status{grid-column:1/-1;grid-row:auto;justify-self:flex-start;margin-top:4px;padding:4px 8px;font-size:.5rem}
+      .ag-role{padding-left:62px}
+    }
+
+    /* ============ PRINT · clean A4 layout for distribution ============ */
+    @media print{
+      *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+      html,body{background:#fff !important;color:#000 !important}
+      body::before,body::after{display:none !important}
+      .progress,.skip,.status,.menu-toggle,.tape,.tape-text,.vstrip,
+      .hero-cta,.btn,.bf-stamp,.featured,.signature,.setup,.sets-strip,
+      .closing,.closing-cta,.player,.nav,.header-action,
+      .agenda-row.past{display:none !important}
+      a[href]{color:#000 !important;text-decoration:underline}
+      a[href^="http"]::after{content:" (" attr(href) ")";font-size:.7em;color:#555;text-decoration:none}
+      .header{position:static;background:#fff !important;border-color:#000 !important;color:#000 !important;box-shadow:none}
+      .mast-mark{background:#000 !important;color:#fff !important}
+      .mast-text b,.mast-text span{color:#000 !important}
+      .hero{min-height:auto;padding:18px 0 24px;page-break-after:avoid}
+      .hero-meta{border-color:#000 !important;color:#000 !important}
+      .meta-cell dd,.meta-cell dd b{color:#000 !important}
+      .meta-cell dt{color:#444 !important}
+      .hero-grid{grid-template-columns:1fr 1fr !important;gap:30px}
+      .hero-photo{aspect-ratio:4/5;max-height:280px;border:1px solid #000 !important}
+      .hero-photo .ph{filter:contrast(1.1) saturate(1) brightness(1) !important}
+      .hero-photo::after,.ph-cross{display:none !important}
+      .hero-tag{background:#000 !important;color:#fff !important}
+      .hero-title,.hero-title .o{color:#000 !important}
+      .hero-title .out{color:transparent !important;-webkit-text-stroke:1.5px #000}
+      .hero-role,.hero-lede,.hero-lede mark{color:#000 !important;background:transparent !important}
+      .section{padding:24px 0;page-break-inside:avoid;border-color:#000 !important;background:#fff !important}
+      .section-head{border-color:#000 !important}
+      .section-tag .num{background:#000 !important;color:#fff !important}
+      .section-title,.section-title .o,.section-title em{color:#000 !important}
+      .section-title .out{color:transparent !important;-webkit-text-stroke:1.5px #000}
+      .release-body p,.release-body p.lede,.release-body p.lede::first-letter,
+      .pull,.pull span,.pull-foot{color:#000 !important;border-color:#000 !important;background:transparent !important}
+      .spec,.spec-body{background:#fff !important;color:#000 !important;border-color:#000 !important}
+      .spec-head{background:#000 !important;color:#fff !important}
+      .spec-row dd,.spec-row dt,.spec-row dd em{color:#000 !important}
+      .portraits-grid{grid-template-columns:1fr 1fr !important;gap:20px}
+      .portrait{aspect-ratio:3/4;border:1px solid #000 !important;page-break-inside:avoid}
+      .portrait::before,.portrait::after,.p-cross{display:none !important}
+      .p-frame,.p-foot{color:#fff !important;mix-blend-mode:normal !important;background:rgba(0,0,0,.6) !important;padding:4px 6px}
+      .dir{border-color:#000 !important;page-break-inside:avoid}
+      .dir-card{background:#fff !important;border-color:#000 !important;color:#000 !important}
+      .dir-card::before{display:none !important}
+      .dir-num,.dir-title,.dir-title .o,.dir-desc,.dir-meta,.dir-meta b{color:#000 !important}
+      .dir-brand{border-color:#000 !important;color:#000 !important;background:#fff !important}
+      .stats-section{background:#fff !important}
+      .stats-grid,.stat-cell{border-color:#000 !important;background:#fff !important}
+      .stat-cell::before,.stat-cell::after{display:none !important}
+      .stat-num,.stat-num em,.stat-label,.stat-meta{color:#000 !important}
+      .agenda-list,.agenda-row{border-color:#000 !important;background:#fff !important}
+      .ag-date b,.ag-date em,.ag-venue,.ag-venue em,.ag-city,.ag-role{color:#000 !important}
+      .ag-status{border-color:#000 !important;color:#000 !important}
+      .ag-dot{background:#000 !important;animation:none !important}
+      .booking-frame{background:#fff !important;color:#000 !important;border-color:#000 !important;min-height:auto}
+      .booking-frame::before{display:none}
+      .bf-row,.bf-row b{color:#000 !important}
+      .b-list{border-color:#000 !important}
+      .b-list a,.b-list .val,.b-list .lab,.b-list .arr{color:#000 !important}
+      .b-mark{border-color:#000 !important;color:#000 !important}
+      .colo{background:#fff !important}
+      .colo-head,.colo-head b,.colo-title,.colo-title em,.colo-block dd,.colo-block dt,
+      .colo-foot,.colo-foot b{color:#000 !important;border-color:#000 !important}
+      .colo-logo{background:#fff !important;border-color:#000 !important}
+      .colo-logo img{filter:none !important}
+      @page{margin:18mm 14mm}
+    }
   </style>
 
   <!-- =====================================================================
@@ -2153,7 +2484,8 @@
         <a href="#home"><span>00</span>Home</a>
         <a href="#release"><span>01</span>Release</a>
         <a href="#directory"><span>02</span>Directory</a>
-        <a href="#sets"><span>02B</span>Sets</a>
+        <a href="#sets"><span>02B</span>Audio</a>
+        <a href="#agenda"><span>★</span>Agenda</a>
         <a href="#booking"><span>03</span>Booking</a>
       </nav>
 
@@ -2564,22 +2896,22 @@
           <div class="sig-row">
             <span class="sig-label">Tribal House</span>
             <div class="sig-track"><div class="sig-fill" style="--w:55%"></div></div>
-            <span class="sig-pct">55<em>%</em></span>
+            <span class="sig-pct"><span data-count="55">0</span><em>%</em></span>
           </div>
           <div class="sig-row">
             <span class="sig-label">Afro House</span>
             <div class="sig-track"><div class="sig-fill" style="--w:22%"></div></div>
-            <span class="sig-pct">22<em>%</em></span>
+            <span class="sig-pct"><span data-count="22">0</span><em>%</em></span>
           </div>
           <div class="sig-row">
             <span class="sig-label">Deep · Vocal</span>
             <div class="sig-track"><div class="sig-fill" style="--w:15%"></div></div>
-            <span class="sig-pct">15<em>%</em></span>
+            <span class="sig-pct"><span data-count="15">0</span><em>%</em></span>
           </div>
           <div class="sig-row">
             <span class="sig-label">Peak-Time</span>
             <div class="sig-track"><div class="sig-fill" style="--w:8%"></div></div>
-            <span class="sig-pct">8<em>%</em></span>
+            <span class="sig-pct"><span data-count="8">0</span><em>%</em></span>
           </div>
         </div>
 
@@ -2609,6 +2941,98 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- ============ STATS · By The Numbers ============ -->
+    <section class="section stats-section" id="numbers">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-tag"><span class="num">★</span> · By the numbers</div>
+          <div class="section-rule"></div>
+          <div class="section-side">since 2018</div>
+        </div>
+
+        <h2 class="section-title reveal"><span class="o">Eight</span> /<br><span class="out">on stage.</span></h2>
+
+        <div class="stats-grid reveal">
+          <div class="stat-cell">
+            <span class="stat-num"><span data-count="8">0</span></span>
+            <span class="stat-label">Years on stage</span>
+            <span class="stat-meta">Active since <b>2018</b></span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num"><span data-count="220">0</span><em>+</em></span>
+            <span class="stat-label">Gigs delivered</span>
+            <span class="stat-meta">RJ <b>·</b> BR · 2018→2026</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num"><span data-count="30">0</span><em>+</em></span>
+            <span class="stat-label">Original tracks</span>
+            <span class="stat-meta">Mostly in <b>own sets</b></span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num"><span data-count="12">0</span></span>
+            <span class="stat-label">Cities · BR</span>
+            <span class="stat-meta">RJ · SP · BSB · BA · PE…</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AGENDA · On stage / Selected shows ============ -->
+    <section class="section agenda" id="agenda">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-tag"><span class="num">▶</span> · Agenda · Selected</div>
+          <div class="section-rule"></div>
+          <div class="section-side">2026 line-up</div>
+        </div>
+
+        <h2 class="section-title reveal">On <span class="o">stage</span> /<br><span class="out">selected.</span></h2>
+
+        <ul class="agenda-list reveal">
+          <li class="agenda-row upcoming">
+            <span class="ag-date"><b>2026 · JUN</b><em>14</em></span>
+            <span class="ag-venue">Festa <em>Tchiboom</em></span>
+            <span class="ag-city">Rio de Janeiro · RJ</span>
+            <span class="ag-role">Resident · Headliner</span>
+            <span class="ag-status"><span class="ag-dot"></span>Upcoming</span>
+          </li>
+          <li class="agenda-row upcoming">
+            <span class="ag-date"><b>2026 · MAY</b><em>28</em></span>
+            <span class="ag-venue"><em>Joy</em></span>
+            <span class="ag-city">Rio de Janeiro · RJ</span>
+            <span class="ag-role">Late-Night set</span>
+            <span class="ag-status"><span class="ag-dot"></span>Upcoming</span>
+          </li>
+          <li class="agenda-row">
+            <span class="ag-date"><b>2026 · MAY</b><em>10</em></span>
+            <span class="ag-venue">The <em>Home</em></span>
+            <span class="ag-city">Rio de Janeiro · RJ</span>
+            <span class="ag-role">Special guest</span>
+            <span class="ag-status"><span class="ag-dot"></span>Confirmed</span>
+          </li>
+          <li class="agenda-row past">
+            <span class="ag-date"><b>2026 · APR</b><em>22</em></span>
+            <span class="ag-venue"><em>Guapo</em></span>
+            <span class="ag-city">Rio de Janeiro · RJ</span>
+            <span class="ag-role">Open Air</span>
+            <span class="ag-status"><span class="ag-dot"></span>Past</span>
+          </li>
+          <li class="agenda-row past">
+            <span class="ag-date"><b>2026 · MAR</b><em>30</em></span>
+            <span class="ag-venue">San <em>Sebastian</em></span>
+            <span class="ag-city">Rio de Janeiro · RJ</span>
+            <span class="ag-role">Closing set</span>
+            <span class="ag-status"><span class="ag-dot"></span>Past</span>
+          </li>
+        </ul>
+
+        <div class="agenda-foot">
+          <span><b>★</b> 02 upcoming · 03 confirmed · selected last 60 days</span>
+          <span>Booking shows <b>2027</b> · contato no WhatsApp <span style="color:var(--ink)">↗</span></span>
+        </div>
       </div>
     </section>
 
@@ -2807,6 +3231,37 @@
     }
     updateClock();
     setInterval(updateClock, 30000);
+
+    // === Number counter (stats + signature) ===
+    const animateCounter = (el) => {
+      const target = parseFloat(el.dataset.count);
+      const duration = 1400;
+      const startTime = performance.now();
+      const step = (now) => {
+        const t = Math.min(1, (now - startTime) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = Math.round(target * eased);
+        if (t < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    if (reduce) {
+      document.querySelectorAll('[data-count]').forEach(el => {
+        el.textContent = el.dataset.count;
+      });
+    } else {
+      const counterIO = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.querySelectorAll('[data-count]').forEach((el, i) => {
+              setTimeout(() => animateCounter(el), i * 120);
+            });
+            counterIO.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.35, rootMargin: '0px 0px -20px 0px' });
+      document.querySelectorAll('.stats-grid, .signature').forEach(el => counterIO.observe(el));
+    }
   </script>
 </body>
 </html>

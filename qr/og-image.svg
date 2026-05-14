@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <pattern id="dotgrid" patternUnits="userSpaceOnUse" width="20" height="20">
+      <circle cx="2" cy="2" r="1" fill="rgba(244,244,244,.05)"/>
+    </pattern>
+    <pattern id="tape45" patternUnits="userSpaceOnUse" width="36" height="36" patternTransform="rotate(-45)">
+      <rect width="18" height="36" fill="#123170"/>
+      <rect x="18" width="18" height="36" fill="#0a0a0a"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+  <rect width="1200" height="630" fill="url(#dotgrid)"/>
+  <!-- left side: title -->
+  <text x="64" y="86" font-family="IBM Plex Mono,monospace" font-size="14" fill="#3a5fb0" letter-spacing="5">★ PRESS KIT · 2026</text>
+  <line x1="64" y1="106" x2="320" y2="106" stroke="#123170" stroke-width="2"/>
+  <text x="64" y="240" font-family="Big Shoulders Display,sans-serif" font-weight="900" font-size="148" letter-spacing="-4" fill="#f4f4f4">ROMULO</text>
+  <text x="64" y="370" font-family="Big Shoulders Display,sans-serif" font-weight="900" font-size="148" letter-spacing="-4" fill="none" stroke="#123170" stroke-width="3">CAVALCANTI</text>
+  <line x1="64" y1="410" x2="700" y2="410" stroke="#cdcdcd" stroke-width="1"/>
+  <text x="64" y="450" font-family="IBM Plex Mono,monospace" font-size="20" fill="#cdcdcd" letter-spacing="5">DJ + PRODUCER · HOUSE × TRIBAL</text>
+  <text x="64" y="478" font-family="IBM Plex Mono,monospace" font-size="14" fill="#7a7a7a" letter-spacing="3">RIO DE JANEIRO · BR · FESTA TCHIBOOM RESIDENT</text>
+  <!-- bottom tag -->
+  <rect x="64" y="528" width="270" height="38" fill="#123170"/>
+  <text x="80" y="554" font-family="IBM Plex Mono,monospace" font-size="14" fill="#f4f4f4" letter-spacing="5">BOOKINGS · OPEN · 2026</text>
+  <!-- right side: vertical tape -->
+  <rect x="1064" y="0" width="36" height="630" fill="url(#tape45)"/>
+  <!-- right side: hero crop frame -->
+  <g>
+    <rect x="800" y="80" width="240" height="430" fill="rgba(244,244,244,.02)" stroke="#123170" stroke-width="2"/>
+    <text x="816" y="108" font-family="IBM Plex Mono,monospace" font-size="11" fill="#3a5fb0" letter-spacing="3">RC / PORTRAIT</text>
+    <text x="1024" y="108" font-family="IBM Plex Mono,monospace" font-size="11" fill="#7a7a7a" letter-spacing="3" text-anchor="end">2026</text>
+    <!-- stylized silhouette (will look like a person shape) -->
+    <ellipse cx="920" cy="230" rx="46" ry="56" fill="#1a1a1a" stroke="#3a5fb0" stroke-width="1"/>
+    <path d="M 850 510 C 850 410 880 350 920 350 C 960 350 990 410 990 510 Z" fill="#1a1a1a" stroke="#3a5fb0" stroke-width="1"/>
+    <!-- crosshair marker -->
+    <line x1="920" y1="285" x2="920" y2="305" stroke="#123170" stroke-width="2"/>
+    <line x1="910" y1="295" x2="930" y2="295" stroke="#123170" stroke-width="2"/>
+    <text x="816" y="498" font-family="IBM Plex Mono,monospace" font-size="11" fill="#cdcdcd" letter-spacing="3">F 2.8 · ISO 800</text>
+  </g>
+  <!-- URL footer -->
+  <text x="600" y="600" font-family="IBM Plex Mono,monospace" font-size="14" fill="#7a7a7a" letter-spacing="4" text-anchor="middle">joseedson18jc.github.io/romulo-press-kit-2026</text>
+</svg>
