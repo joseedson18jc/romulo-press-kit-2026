@@ -1540,29 +1540,98 @@
     .setup-cell .setup-val em{font-style:normal;color:var(--orange-bright);font-weight:500}
 
     /* === Responsive overrides for new blocks === */
+    /* Tablet landscape (1024–1080 horizontal — iPad Pro / typical laptop) */
     @media (max-width:1080px){
-      .track-list a{grid-template-columns:auto 1fr auto auto;gap:18px}
-      .trk-tags{grid-column:1/-1;padding-left:52px;margin-top:-6px}
+      .featured{margin-top:48px;padding-top:32px}
+      .track-list a{grid-template-columns:auto 1.4fr 1fr auto;gap:18px;padding:20px 12px}
+      .trk-tags{grid-column:2/3;font-size:.62rem}
+      .trk-meta{grid-column:3/4;justify-content:flex-end}
+      .trk-arr{grid-column:4}
+      .sig-row{grid-template-columns:130px 1fr auto;gap:18px}
+      .sig-label{font-size:1rem}
+      .signature-head{flex-wrap:wrap;gap:10px}
+      .setup-grid{gap:10px}
+      .setup-cell{padding:16px 18px}
     }
+
+    /* Tablet portrait (iPad vertical · 768–900) */
+    @media (max-width:900px){
+      .featured-head{grid-template-columns:auto 1fr auto;gap:14px}
+      .featured-head .ft-rule{display:none}
+      .track-list a{grid-template-columns:auto 1fr auto;gap:16px;padding:20px 10px}
+      .trk-num{font-size:.7rem}
+      .trk-title{font-size:1.2rem}
+      .trk-tags{grid-column:1/-1;padding-left:56px;margin-top:-4px;font-size:.6rem;letter-spacing:.18em}
+      .trk-meta{grid-column:1/-1;padding-left:56px;margin-top:-2px;gap:18px;justify-content:flex-start}
+      .trk-arr{grid-column:3;align-self:start}
+      .sig-row{grid-template-columns:120px 1fr auto;gap:16px}
+      .signature-head{flex-direction:column;align-items:flex-start;gap:6px}
+      .signature-head .sig-side{display:block;font-size:.62rem}
+      .setup-head{flex-wrap:wrap;gap:8px}
+      .setup-head span:last-child{font-size:.62rem}
+      .setup-grid{grid-template-columns:1fr 1fr;gap:10px}
+    }
+
+    /* Mobile landscape / small tablet (601–760) */
     @media (max-width:760px){
-      .featured-head{grid-template-columns:auto 1fr;gap:12px}
+      .featured{margin-top:40px;padding-top:26px}
+      .featured-head{grid-template-columns:auto 1fr;gap:10px;padding-bottom:10px}
+      .featured-head .ft-title{font-size:.66rem}
       .featured-head .ft-rule,.featured-head .ft-side{display:none}
-      .track-list a{grid-template-columns:auto 1fr auto;gap:14px;padding:18px 8px}
-      .track-list a:hover{padding-left:16px}
-      .trk-tags{grid-column:1/-1;padding-left:46px;margin-top:-4px;font-size:.6rem}
-      .trk-meta{grid-column:1/-1;padding-left:46px;margin-top:-4px;gap:14px}
-      .trk-title{font-size:1.15rem}
-      .sig-row{grid-template-columns:90px 1fr auto;gap:14px;padding:12px 0}
-      .sig-label{font-size:.95rem}
-      .sig-pct{font-size:1.15rem;min-width:54px}
-      .signature-head .sig-side{display:none}
+      .track-list a{grid-template-columns:auto 1fr auto;gap:12px;padding:16px 6px}
+      .track-list a:hover{padding-left:12px}
+      .trk-num{font-size:.62rem;letter-spacing:.18em}
+      .trk-title{font-size:1.05rem;line-height:1.1}
+      .trk-tags{padding-left:42px;font-size:.55rem;letter-spacing:.14em;color:var(--mute)}
+      .trk-meta{padding-left:42px;gap:14px;margin-top:2px}
+      .trk-bpm,.trk-dur{font-size:.62rem}
+      .trk-arr{width:32px;height:32px;font-size:.7rem}
+      .signature{margin-top:42px;padding-top:26px}
+      .signature-head{font-size:.62rem;letter-spacing:.18em}
+      .sig-row{grid-template-columns:80px 1fr 48px;gap:12px;padding:11px 0}
+      .sig-label{font-size:.82rem;letter-spacing:0}
+      .sig-track{height:10px}
+      .sig-pct{font-size:1rem;min-width:48px}
+      .setup{margin-top:32px;padding-top:22px}
+      .setup-head{font-size:.62rem;flex-wrap:wrap;gap:6px}
       .setup-grid{grid-template-columns:1fr 1fr;gap:8px}
-      .setup-cell{padding:14px 16px}
-      .setup-head span:last-child{display:none}
+      .setup-cell{padding:12px 14px;gap:4px}
+      .setup-cell .setup-val{font-size:.92rem;letter-spacing:0}
+      .setup-cell .setup-label{font-size:.56rem;letter-spacing:.18em}
     }
+
+    /* Phone portrait (iPhone padrão · 376–480) */
     @media (max-width:480px){
-      .setup-grid{grid-template-columns:1fr 1fr}
-      .trk-arr{width:32px;height:32px}
+      .featured-head .ft-badge{padding:4px 8px;font-size:.6rem}
+      .featured-head .ft-title{font-size:.58rem}
+      .track-list a{padding:14px 4px;gap:10px}
+      .track-list a:hover{padding-left:8px}
+      .trk-title{font-size:.95rem}
+      .trk-tags{padding-left:36px;font-size:.5rem}
+      .trk-meta{padding-left:36px;gap:10px}
+      .trk-bpm,.trk-dur{font-size:.55rem}
+      .trk-arr{width:28px;height:28px;font-size:.62rem}
+      .sig-row{grid-template-columns:64px 1fr 42px;gap:10px;padding:10px 0}
+      .sig-label{font-size:.74rem;line-height:1.05}
+      .sig-track{height:8px}
+      .sig-pct{font-size:.9rem;min-width:42px}
+      .sig-pct em{display:none}
+      .setup-grid{grid-template-columns:1fr 1fr;gap:6px}
+      .setup-cell{padding:10px 12px}
+      .setup-cell .setup-val{font-size:.82rem}
+      .setup-cell .setup-label{font-size:.52rem}
+    }
+
+    /* Tiny phones / very narrow (≤360px · iPhone SE / Android compact) */
+    @media (max-width:360px){
+      .track-list a{grid-template-columns:auto 1fr;gap:8px}
+      .trk-arr{grid-column:1/-1;justify-self:flex-end;margin-top:6px}
+      .trk-tags,.trk-meta{padding-left:30px}
+      .sig-row{grid-template-columns:1fr auto;gap:6px}
+      .sig-label{grid-column:1/-1;font-size:.78rem;margin-bottom:-4px}
+      .sig-track{grid-column:1}
+      .sig-pct{grid-column:2}
+      .setup-grid{grid-template-columns:1fr}
     }
 
     /* ============ CLOSING CTA TAPE ============ */
@@ -1997,6 +2066,30 @@
       .section{padding:48px 0 56px}
     }
   </style>
+
+  <!-- =====================================================================
+       ANALYTICS · cookieless, lightweight (~1 KB)
+       Plausible is the active tracker. To start collecting data:
+         1. Sign up at https://plausible.io (or self-host)
+         2. Add site `joseedson18jc.github.io` (or your custom domain)
+         3. Stats start flowing immediately — no further code changes
+       The script is no-op until the domain is registered in your dashboard.
+       ===================================================================== -->
+  <script defer data-domain="joseedson18jc.github.io" src="https://plausible.io/js/script.js"></script>
+
+  <!-- ALTERNATIVE · Google Analytics 4 (uncomment and replace MEASUREMENT_ID)
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {anonymize_ip:true});
+  </script>
+  -->
+
+  <!-- ALTERNATIVE · GoatCounter (free forever, no signup gate beyond email)
+  <script data-goatcounter="https://YOURNAME.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  -->
 </head>
 <body>
 
